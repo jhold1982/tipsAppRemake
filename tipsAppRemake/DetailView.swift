@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct DetailView: View {
+	
+	// MARK: - Properties
+	
+	
+	
+	// MARK: - View Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		
+		TabView {
+			ForEach(0..<5) { _ in
+				PageView()
+			}
+		}
+		.navigationTitle("Essentials")
+		.navigationBarTitleDisplayMode(.inline)
+		.tabViewStyle(PageTabViewStyle())
+		.indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
     }
 }
 
